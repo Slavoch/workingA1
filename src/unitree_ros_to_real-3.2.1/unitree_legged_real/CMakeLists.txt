@@ -16,7 +16,7 @@ include_directories(
     ${Boost_INCLUDE_DIR}
     ${catkin_INCLUDE_DIRS}
 )
-set(ENV{UNITREE_LEGGED_SDK_PATH} "/home/sava/unitree/catkin_ws/src/unitree_legged_sdk")
+set(ENV{UNITREE_LEGGED_SDK_PATH} "${CMAKE_SOURCE_DIR}/../../unitree_legged_sdk")
 set(ENV{UNITREE_PLATFORM} "amd64")
 set(CMAKE_CXX_FLAGS "-O3")
 
