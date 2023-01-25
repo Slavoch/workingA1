@@ -164,13 +164,11 @@ int main(int argc, char *argv[]){
     std::string firmwork;
     ros::param::get("/firmwork", firmwork);
 
-    std::string robot_name;
+        
     UNITREE_LEGGED_SDK::LeggedType rname;
-    ros::param::get("/robot_name", robot_name);
-    if(strcasecmp(robot_name.c_str(), "A1") == 0)
-        rname = UNITREE_LEGGED_SDK::LeggedType::A1;
-    else if(strcasecmp(robot_name.c_str(), "Aliengo") == 0)
-        rname = UNITREE_LEGGED_SDK::LeggedType::Aliengo;
+    
+    rname = UNITREE_LEGGED_SDK::LeggedType::A1;
+
         
     // UNITREE_LEGGED_SDK::Control control(rname, UNITREE_LEGGED_SDK::LOWLEVEL);
     // UNITREE_LEGGED_SDK::InitEnvironment();
